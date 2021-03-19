@@ -4,12 +4,12 @@ This repository is the starter code for the TypeScript workshops we ran in March
 
 ## Resources
 
+- [Gary Bernhardt’s Ideology conference talk](https://www.destroyallsoftware.com/talks/ideology)
 - [TypeScript official website](https://www.typescriptlang.org/)
 - [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 - [TypeScript playground](https://www.typescriptlang.org/play)
-- [Gary Bernhardt’s Ideology conference talk](https://www.destroyallsoftware.com/talks/ideology)
-- [Mypy](https://mypy.readthedocs.io/en/stable/)
 - [Elm](https://elm-lang.org/), [ReasonML](https://reasonml.github.io/), [PureScript](https://www.purescript.org/)
+- [Mypy](https://mypy.readthedocs.io/en/stable/)
 
 ## Intro
 
@@ -94,11 +94,11 @@ nodemon hello.js
 - Primitive types
 - tsc
 
+`fizzbuzz.ts`
+
 `programmes.ts`
 
 ### Type aliases, combining types & type manipulations
-
-`fizzbuzz.ts`
 
 `unitToggle.ts`
 
