@@ -1,4 +1,129 @@
-# Getting Started with Create React App
+# TypeScript workshops | March 2021
+
+This repository is the starter code for the TypeScript workshops we ran in March 2021. [Workshop agenda & notes on Google Drive](https://docs.google.com/document/d/1-UgoJMTJh6TWRE_xsQfCH1WFmWCl-aKtFy3CAzNq5eg/edit).
+
+## Resources
+
+- [TypeScript official website](https://www.typescriptlang.org/)
+- [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [TypeScript playground](https://www.typescriptlang.org/play)
+- [Gary Bernhardt’s Ideology conference talk](https://www.destroyallsoftware.com/talks/ideology)
+- [Mypy](https://mypy.readthedocs.io/en/stable/)
+- [Elm](https://elm-lang.org/), [ReasonML](https://reasonml.github.io/), [PureScript](https://www.purescript.org/)
+
+## Intro
+
+TypeScript
+
+Why types – chart: [cost of finding software defect, and where defects are introduced](https://www.stickyminds.com/article/shift-left-approach-software-testing)
+
+### Static vs Dynamic typing
+
+- Static: the compiler raises type errors when compiling, for all code (generally). In theory no or very few type errors at runtime.
+- Dynamic: no type errors when compiling (or no compiler). Type errors at runtime (for code that actually runs)
+- Some dynamic languages also come with optional static type checkers.
+
+Guess what the following langues are: C, Java, Scala, Rust, Python, JavaScript, TypeScript
+
+Screenshot of test cases
+
+Correctness: 14:06 https://www.destroyallsoftware.com/talks/ideology
+
+### Structural vs nominal typing
+
+Nominal:
+
+```js
+class Foo {
+  method(input: string): number { ... }
+}
+class Bar {
+  method(input: string): number { ... }
+}
+let foo: Foo = new Bar(); // ERROR!!
+```
+
+Structural:
+
+```js
+class Foo {
+  method(input: string): number { ... }
+}
+class Bar {
+  method(input: string): number { ... }
+}
+let foo: Foo = new Bar(); // Okay.
+```
+
+Sometimes languages mix both!
+
+### TypeScript’s take
+
+- Static at build time, with concessions. Still JavaScript (dynamic) at runtime.
+- Type inference wherever possible
+- Type enforcement strictness is configurable
+- Compatible with existing JS code without much hassle (e.g. Elm)
+
+### TypeScript beyond types
+
+- A standard language (replaces Babel)
+- Integrated JS compiler (replaces Babel’s 1000 different plugins, presets, helper packages)
+- Well documented
+- Built-in JSX support
+- There are a few other language features, like:
+
+### Basic project setup, TypeScript configuration overview
+
+- Create React App: `npx create-react-app my-app --template typescript --use-npm`
+- tsconfig.json
+- ESLint, Prettier, Jest, etc.
+- [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+
+### Type annotations & inference 101. ts-ignore & ts-expect-error
+
+```sh
+npm install -g typescript
+tsc hello.ts
+node hello.js
+tsc --watch hello.ts
+nodemon hello.js
+```
+
+- Basic syntax
+- Annotations vs inference
+- Primitive types
+- tsc
+
+`programmes.ts`
+
+### Type aliases, combining types & type manipulations
+
+`fizzbuzz.ts`
+
+`unitToggle.ts`
+
+- Aliases
+- Union types
+- typeof, keyof, keyed access
+
+---
+
+## Homework 1
+
+`distances.ts`
+
+Add types, to narrow down the function’s input and output as much as possible, with the least repetition possible.
+
+---
+
+## Workshop 2 intro
+
+Type aliases vs interfaces
+Interfaces only describe object shapes (or functions?)
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
