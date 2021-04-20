@@ -79,7 +79,7 @@ Sometimes languages mix both!
 - ESLint, Prettier, Jest, etc.
 - [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
-### Type annotations & inference 101. ts-ignore & ts-expect-error
+## Type annotations & inference 101. ts-ignore & ts-expect-error
 
 ```sh
 npm install -g typescript
@@ -98,7 +98,7 @@ nodemon hello.js
 
 `programmes.ts`
 
-### Type aliases, combining types & type manipulations
+## Type aliases, combining types & type manipulations
 
 `unitToggle.ts`
 
@@ -118,8 +118,37 @@ Add types, to narrow down the function’s input and output as much as possible,
 
 ## Workshop 2 intro
 
-Type aliases vs interfaces
-Interfaces only describe object shapes (or functions?)
+## Narrowing types, generics, casting
+
+Typing vanilla JS DOM UI widgets
+
+[accordion.js](https://git.torchbox.com/internal/wagtail-kit/-/blob/master/wagtailkit_repo_name/wagtailkit_repo_name/static_src/javascript/components/accordion.js)
+
+[TypeScript Playground](https://www.typescriptlang.org/play)
+
+## TypeScript + React
+
+### Basic project setup
+
+- Create React App: `npx create-react-app my-app --template typescript --use-npm`
+- tsconfig.json
+- ESLint, Prettier, Jest, etc.
+- .tsx
+
+### Typing props & generics
+
+- TypeScript types vs React PropTypes
+- [Type aliases or interfaces](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example#types-or-interfaces)
+- [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
+
+## Dependencies, declaration files, DefinitelyTyped
+
+- reading-time: DefinitelyTyped
+- [Type Search](https://www.typescriptlang.org/dt/search)
+- [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+- [dts-gen](https://github.com/Microsoft/dts-gen)
+- Manually writing declaration files
+- [globals](https://github.com/wagtail/wagtail/blob/main/client/src/custom.d.ts)
 
 ---
 
