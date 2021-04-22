@@ -4,10 +4,14 @@ This repository is the starter code for the TypeScript workshops we ran in March
 
 ## Resources
 
-- [Gary Bernhardt’s Ideology conference talk](https://www.destroyallsoftware.com/talks/ideology)
 - [TypeScript official website](https://www.typescriptlang.org/)
 - [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
 - [TypeScript playground](https://www.typescriptlang.org/play)
+- [Type Search](https://www.typescriptlang.org/dt/search)
+- [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+- [dts-gen](https://github.com/Microsoft/dts-gen)
+- [Gary Bernhardt’s Ideology conference talk](https://www.destroyallsoftware.com/talks/ideology)
 - [Elm](https://elm-lang.org/), [ReasonML](https://reasonml.github.io/), [PureScript](https://www.purescript.org/)
 - [Mypy](https://mypy.readthedocs.io/en/stable/)
 
