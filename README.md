@@ -1,8 +1,51 @@
-# TypeScript workshops | March 2021
+# TypeScript workshops | llamatypes
 
-This repository is the starter code for the TypeScript workshops we ran in March 2021. [Workshop agenda & notes on Google Drive](https://docs.google.com/document/d/1-UgoJMTJh6TWRE_xsQfCH1WFmWCl-aKtFy3CAzNq5eg/edit).
+Static types FTW! A short series of workshops and take-home exercises for static typing beginners who already know JavaScript and React.
 
-## Resources
+## #1 Types 101, 19/03
+
+Erratum: when compiling a single file, tsc doesn't read the tsconfig.json! It only reads it when run without any files input (`tsc`), or when running via Webpack or similar like a normal project.
+
+Recommended resources for further information:
+
+- [Gary Bernhardt's Ideology conference talk](https://www.destroyallsoftware.com/talks/ideology)
+- [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [TypeScript playground](https://www.typescriptlang.org/play)
+- [Elm](https://elm-lang.org/),[ReasonML](https://reasonml.github.io/),[PureScript](https://www.purescript.org/)
+
+### Housekeeping
+
+- 90min, grab a drink, turn off Slack
+- Make sure you have Node 14 and npm v6 installed on your computer ahead of time
+  - `node --version`
+  - `npm --version`
+
+### Agenda
+
+- 12:00 -- Welcome
+- 12:05 -- Intro: Why TypeScript, type systems
+  - Static typing vs dynamic typing (compile-time, runtime)
+  - Structural typing vs nominal typing
+  - TypeScript's type system
+  - TypeScript beyond types. To TypeScript or not to TypeScript
+- 12:20 -- Basic project setup, TypeScript configuration overview
+  - Create React App
+  - tsconfig.json
+  - ESLint, Prettier, Jest
+  - DefinitelyTyped
+  - IDE
+- 12:35 -- Type annotations & inference 101. ts-ignore & ts-expect-error
+  - Basic syntax
+  - Annotations vs inference
+  - Primitive types
+  - tsc
+- 12:50 -- Type aliases, combining types & type manipulations
+  - Aliases
+  - Union types
+  - typeof, keyof, keyed access
+- 13:20 -- Questions
+
+### Resources
 
 - [TypeScript official website](https://www.typescriptlang.org/)
 - [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
@@ -15,13 +58,13 @@ This repository is the starter code for the TypeScript workshops we ran in March
 - [Elm](https://elm-lang.org/), [ReasonML](https://reasonml.github.io/), [PureScript](https://www.purescript.org/)
 - [Mypy](https://mypy.readthedocs.io/en/stable/)
 
-## Intro
+### Intro
 
 TypeScript
 
 Why types – chart: [cost of finding software defect, and where defects are introduced](https://www.stickyminds.com/article/shift-left-approach-software-testing)
 
-### Static vs Dynamic typing
+#### Static vs Dynamic typing
 
 - Static: the compiler raises type errors when compiling, for all code (generally). In theory no or very few type errors at runtime.
 - Dynamic: no type errors when compiling (or no compiler). Type errors at runtime (for code that actually runs)
@@ -33,7 +76,7 @@ Screenshot of test cases
 
 Correctness: 14:06 https://www.destroyallsoftware.com/talks/ideology
 
-### Structural vs nominal typing
+#### Structural vs nominal typing
 
 Nominal:
 
@@ -61,14 +104,14 @@ let foo: Foo = new Bar(); // Okay.
 
 Sometimes languages mix both!
 
-### TypeScript’s take
+#### TypeScript’s take
 
 - Static at build time, with concessions. Still JavaScript (dynamic) at runtime.
 - Type inference wherever possible
 - Type enforcement strictness is configurable
 - Compatible with existing JS code without much hassle (e.g. Elm)
 
-### TypeScript beyond types
+#### TypeScript beyond types
 
 - A standard language (replaces Babel)
 - Integrated JS compiler (replaces Babel’s 1000 different plugins, presets, helper packages)
@@ -76,14 +119,14 @@ Sometimes languages mix both!
 - Built-in JSX support
 - There are a few other language features, like:
 
-### Basic project setup, TypeScript configuration overview
+#### Basic project setup, TypeScript configuration overview
 
 - Create React App: `npx create-react-app my-app --template typescript --use-npm`
 - tsconfig.json
 - ESLint, Prettier, Jest, etc.
 - [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
-## Type annotations & inference 101. ts-ignore & ts-expect-error
+### Type annotations & inference 101. ts-ignore & ts-expect-error
 
 ```sh
 npm install -g typescript
@@ -102,7 +145,7 @@ nodemon hello.js
 
 `programmes.ts`
 
-## Type aliases, combining types & type manipulations
+### Type aliases, combining types & type manipulations
 
 `unitToggle.ts`
 
@@ -114,15 +157,31 @@ nodemon hello.js
 
 ## Homework 1
 
-`distances.ts`
+Add types to `distances.ts`, applying the concepts we learned during the workshop.
 
-Add types, to narrow down the function’s input and output as much as possible, with the least repetition possible.
+Try different variations to have more or less precise type definitions. Try different ways of writing the types to reduce repetition where relevant.
 
----
+To submit your answer, DM Thibaud with a link to your merge request, or to the TypeScript playground: <https://www.typescriptlang.org/play>.
 
-## Workshop 2 intro
+## Workshop 2: TypeScript real-world tasks
 
-## Narrowing types, generics, casting
+Recommended resources for further information:
+
+- <https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b>
+- <https://react-typescript-cheatsheet.netlify.app/>
+- <https://www.destroyallsoftware.com/talks/ideology>
+
+### Housekeeping
+
+- Make sure you have Node 14 and npm v6 installed on your computer
+- Prerequisite: you know everything from the [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Prerequisite: you've seen React code before
+
+### Agenda
+
+See README below.
+
+#### Narrowing types, generics, casting
 
 Typing vanilla JS DOM UI widgets
 
@@ -130,22 +189,22 @@ Typing vanilla JS DOM UI widgets
 
 [TypeScript Playground](https://www.typescriptlang.org/play)
 
-## TypeScript + React
+#### TypeScript + React
 
-### Basic project setup
+##### Basic project setup
 
 - Create React App: `npx create-react-app my-app --template typescript --use-npm`
 - tsconfig.json
 - ESLint, Prettier, Jest, etc.
 - .tsx
 
-### Typing props & generics
+##### Typing props & generics
 
 - TypeScript types vs React PropTypes
 - [Type aliases or interfaces](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example#types-or-interfaces)
 - [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
 
-## Dependencies, declaration files, DefinitelyTyped
+#### Dependencies, declaration files, DefinitelyTyped
 
 - reading-time: DefinitelyTyped
 - [Type Search](https://www.typescriptlang.org/dt/search)
@@ -154,51 +213,19 @@ Typing vanilla JS DOM UI widgets
 - Manually writing declaration files
 - [globals](https://github.com/wagtail/wagtail/blob/main/client/src/custom.d.ts)
 
----
+## Homework 2
 
-## Getting Started with Create React App
+Add types to `distances.ts`, applying the concepts we learned during the workshop.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Try to aim for different levels of strictness of the type definitions, making them as precise as possible but if possible with little or no repetition.
 
-## Available Scripts
+There are specific language features I would expect to see, from simplest to most advanced:
 
-In the project directory, you can run:
+1. Type aliases and union types
+2. "as const", typeof, keyof operators
+3. Casting ("as" keyword), Type narrowing (if statement)
+4. Generics
 
-### `npm start`
+If you want a bigger challenge, go further and make a solution using something we didn't cover in the workshop -- some of the above plus type guards, or function overloads, or conditional types.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Submit your solution either as a MR on the repository, or a link to the [TypeScript Playground](https://www.typescriptlang.org/play).
